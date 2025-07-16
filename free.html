@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>広島の恋</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f5f5;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px 30px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 1.1em;
+    }
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+    .project {
+      background-color: white;
+      --border-radius: 8px;
+border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .project:hover {
+      transform: scale(1.02);
+    }
+    .project img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    .project-details {
+      padding: 15px;
+    }
+    .project-details h3 {
+      margin-top: 0;
+      font-size: 1.2em;
+    }
+    .project-details p {
+      font-size: 0.95em;
+      color: #555;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #222;
+      color: #fff;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+      .project img {
+        height: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>よくあるご質問</h1>
+  <p>（モニター）</p>
+</header>
+
+<main class="portfolio">
+  <div class="project">
+    <img src="https://shop.r10s.jp/lovehiroshima/cabinet/11140213/imgrc0100999734.jpg" alt="作品1">
+  </div>
+   <p style="text-align:center; font-size: 0.9em; color: #555; margin-top: 8px;">
+     【アプリ不要・実容量保証】 USB メモリ
+   </p>
+
+  <div class="project">
+    <img src="https://via.placeholder.com/400x250?text=作品2" alt="作品2">
+    <div class="project-details">
+      <h3>Q：参加方法を教えてください</h3>
+      <p>A：希望のキャンペーンに応募　
+	ーー＞　当選者のみLINE通知　
+	ーー＞　指定店舗で商品購入
+	商品到着後、レビューを投稿、レビュー掲載確認後、全額返金</p>
+    </div>
+  </div>
+  <div class="project">
+    <img src="https://img.win3000.com/m00/10/88/c628daad0d16888e77009746fc0220c6.jpg" alt="作品3">
+    <div class="project-details">
+      <h3>Q：返金方法は？</h3>
+      <p>A：PayPay/PayPal/Amazonギフトコードで対応</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  &copy; 広島の恋 - 所有权利保留
+</footer>
+
+</body>
+</html>
+
