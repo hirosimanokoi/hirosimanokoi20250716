@@ -1,177 +1,127 @@
-
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>広島の恋</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #f5f5f5;
-    }
-    header {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 60px 20px 30px;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-    header p {
-      margin-top: 10px;
-      font-size: 1.1em;
-    }
-    .portfolio {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 20px;
-      padding: 40px;
-    }
-    .project {
-      width: 100%; /* 自动根据网格铺满 */
-  max-width: 400px; /* 可选：限制最大宽度 */
-  margin: auto;     /* 可选：居中 */
-    }
-    .project:hover {
-      transform: scale(1.02);
-    }
-    .project img {
-      width: 100%;          /* 宽度铺满容器 */
---  height: auto;         /* 高度自动按比例拉伸 */
-  object-fit: contain;  /* 保证整个图片显示出来，不裁剪 */
-  display: block;
-  background-color: #f5f5f5; /* 给空白背景一点颜色 */
-    }
-    .project-details {
-      padding: 15px;
-    }
-    .project-details h3 {
-      margin-top: 0;
-      font-size: 1.2em;
-    }
-    .project-details p {
-      font-size: 0.95em;
-      color: #555;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #222;
-      color: #fff;
-      font-size: 0.9em;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品展示页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .product {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            width: 280px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid #eee;
+        }
+        .product h2 {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .product p {
+            font-size: 16px;
+            color: #777;
+            margin: 0 15px 15px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2em;
-      }
-      .project img {
-        height: 150px;
-      }
-    }
-  </style>
+        /* 响应式布局 */
+        @media (max-width: 768px) {
+            .product {
+                width: 100%; /* 在平板和手机上，每个商品占满屏幕 */
+                margin: 10px 0;
+            }
+            .container {
+                flex-direction: column; /* 一列显示商品 */
+                align-items: center;
+            }
+        }
+
+        /* 小屏幕手机上的样式 */
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 24px; /* 调整店名字体大小 */
+            }
+            .product h2 {
+                font-size: 18px; /* 调整商品名字体大小 */
+            }
+            .product p {
+                font-size: 14px; /* 调整商品描述的字体大小 */
+                margin: 0 10px 10px;
+            }
+        }
+
+        /* 商品卡片的悬停效果 */
+        .product:hover {
+            transform: translateY(-10px); /* 悬停时商品卡片稍微抬起 */
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>我的在线商店</h1>
+    </header>
 
-<header>
-  <h1>よくあるご質問</h1>
-  <p>（モニター）</p>
-</header>
+    <div class="container">
+        <!-- 商品1 -->
+        <div class="product">
+            <img src="https://shop.r10s.jp/lovehiroshima/cabinet/11140213/imgrc0100999734.jpg" alt="USB メモリ">
+            <h2>商品名称 1</h2>
+            <p>这是商品1的简单说明。它非常适合日常使用，质量非常好，价格合理。</p>
+        </div>
 
-<main class="portfolio">
+        <!-- 商品2 -->
+        <div class="product">
+            <img src="https://via.placeholder.com/280x180" alt="商品2">
+            <h2>商品名称 2</h2>
+            <p>这是商品2的简单说明。这个商品具有极高的性价比，是很多用户的首选。</p>
+        </div>
 
-<div class="project">
-		<img src="https://shop.r10s.jp/lovehiroshima/cabinet/11140213/imgrc0100999734.jpg" alt="USB メモリ">
-	</div>
-	<p style="text-align:center; font-size: 0.9em; color: #555; margin-top: 10px;">
-		USB メモリ
-	</p>
-	<div class="project">
-		<img src="https://image.rakuten.co.jp/lovehiroshima/cabinet/10844141/10844358/color.jpg.jpg" alt="ペット 給水器">
-	</div>
-	<p style="text-align:center; font-size: 0.9em; color: #555; margin-top: 10px;">
-		ペット 給水器
-	</p>
-	<div class="project">
-		<img src="https://shop.r10s.jp/lovehiroshima/cabinet/12206630/1.jpg.jpg" alt="自撮りモニター">
-	</div>
-	<p style="text-align:center; font-size: 0.9em; color: #555; margin-top: 10px;">
-		自撮りモニター
-	</p>
-	<div class="project">
-		<img src="https://shop.r10s.jp/lovehiroshima/cabinet/12207440/15.jpg" alt="盗聴器 発見器">
-	</div>
-	<p style="text-align:center; font-size: 0.9em; color: #555; margin-top: 10px;">
-		盗聴器 発見器
-	</p>
-	<div class="project">
-		<img src="https://image.rakuten.co.jp/lovehiroshima/cabinet/12203198/bla.jpg" alt="デジタルカメラ">
-	</div>
-	<p style="text-align:center; font-size: 0.9em; color: #555; margin-top: 10px;">
-		デジタルカメラ
-	</p><div class="project">
-		<img src="https://shop.r10s.jp/lovehiroshima/cabinet/11140213/imgrc0100999734.jpg" alt="USB メモリ">
-	</div>
-	<p style="text-align:center; font-size: 0.9em; color: #555; margin-top: 10px;">
-		USB メモリ
-	</p>
-	<div class="project">
-		<img src="https://image.rakuten.co.jp/lovehiroshima/cabinet/10844141/10844358/color.jpg.jpg" alt="ペット 給水器">
-	</div>
-	<p style="text-align:center; font-size: 0.9em; color: #555; margin-top: 10px;">
-		ペット 給水器
-	</p>
-	<div class="project">
-		<img src="https://shop.r10s.jp/lovehiroshima/cabinet/12206630/1.jpg.jpg" alt="自撮りモニター">
-	</div>
-	<p style="text-align:center; font-size: 0.9em; color: #555; margin-top: 10px;">
-		自撮りモニター
-	</p>
-	<div class="project">
-		<img src="https://shop.r10s.jp/lovehiroshima/cabinet/12207440/15.jpg" alt="盗聴器 発見器">
-	</div>
-	<p style="text-align:center; font-size: 0.9em; color: #555; margin-top: 10px;">
-		盗聴器 発見器
-	</p>
-	<div class="project">
-		<img src="https://image.rakuten.co.jp/lovehiroshima/cabinet/12203198/bla.jpg" alt="デジタルカメラ">
-	</div>
-	<p style="text-align:center; font-size: 0.9em; color: #555; margin-top: 10px;">
-		デジタルカメラ
-	</p>
-
-  <div class="project">
-    <div class="project-details">
-      <h3>Q：申込方法</h3>
-      <p>A：LINEで「商品名＋参加希望」とそうしんこうしきアカウントを追加、追加後、キャンペーンに参加</p>
+        <!-- 商品3 -->
+        <div class="product">
+            <img src="https://via.placeholder.com/280x180" alt="商品3">
+            <h2>商品名称 3</h2>
+            <p>商品3的简单介绍。它的功能非常强大，使用非常便捷，是你生活中的好帮手。</p>
+        </div>
     </div>
-  </div>
-  <div class="project">
-    <img src="https://via.placeholder.com/400x250?text=作品2" alt="作品2">
-    <div class="project-details">
-      <h3>Q：参加方法を教えてください</h3>
-      <p>A：希望のキャンペーンに応募<br>
-	ーー＞　当選者のみLINE通知<br>
-	ーー＞　指定店舗で商品購入<br>
-	商品到着後、レビューを投稿、レビュー掲載確認後、全額返金</p>
-    </div>
-  </div>
-  <div class="project">
-    <img src="https://img.win3000.com/m00/10/88/c628daad0d16888e77009746fc0220c6.jpg" alt="作品3">
-    <div class="project-details">
-      <h3>Q：返金方法は？</h3>
-      <p>A：PayPay/PayPal/Amazonギフトコードで対応</p>
-    </div>
-  </div>
-</main>
 
-<footer>
-  &copy; 広島の恋 - 所有权利保留
-</footer>
-
+    <footer>
+        <p>&copy; 2025 我的在线商店. 版权所有.</p>
+    </footer>
 </body>
 </html>
