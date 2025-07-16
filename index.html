@@ -7,6 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+ justify-content: center;
             margin: 0;
             padding: 0;
             background-color: #f5f5f5;
@@ -20,6 +21,13 @@
         header h1 {
             margin: 0;
         }
+.text {
+            width: 300px; /* 固定宽度 */
+            padding: 15px; /* 内边距，保证文字不贴边 */
+            font-size: 16px; /* 文字大小 */
+            color: #333; /* 文字颜色，使用深灰色 */
+            margin: 20px auto; /* 上下和左右的外边距，使文字框居中 */
+        }
         .container {
             display: flex;
             flex-wrap: wrap;
@@ -28,18 +36,33 @@
         }
         .product {
             background-color: white;
-            border-radius: 10px;
+            --border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin: 10px;
             width: 280px;
-            text-align: center;
             transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
-        .product img {
+        .product-image {
             width: 100%;
-            height: auto;
-            border-bottom: 2px solid #eee;
+            height: 180px;
+            overflow: hidden;
+            background-color: #eee;
+display: flex; /* 使用 flex 布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+        }
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 图片按比例填充容器 */
+        }
+        .product-info {
+            padding: 15px;
+            background-color: #fff;
+            text-align: center;
         }
         .product h2 {
             font-size: 20px;
@@ -48,7 +71,7 @@
         .product p {
             font-size: 16px;
             color: #777;
-            margin: 0 15px 15px;
+            margin: 0;
         }
         footer {
             background-color: #333;
@@ -97,30 +120,41 @@
         <h1>我的在线商店</h1>
     </header>
 
-    <div class="container">
+    
         <!-- 商品1 -->
         <div class="product">
-            <img src="https://shop.r10s.jp/lovehiroshima/cabinet/11140213/imgrc0100999734.jpg" alt="USB メモリ">
-            <div class="product-info">
+            <div class="product-image">
+                <img src="https://shop.r10s.jp/lovehiroshima/cabinet/11140213/imgrc0100999734.jpg" alt="USB メモリ">
+            </div>
+            
+        </div>
+<div class="text">
                 <h2>商品名称 1</h2>
                 <p>这是商品1的简单说明。它非常适合日常使用，质量非常好，价格合理。</p>
             </div>
-        </div>
-
-        <!-- 商品2 -->
+    	<!-- 商品4 -->
         <div class="product">
-            <img src="https://via.placeholder.com/280x180" alt="商品2">
-            <h2>商品名称 2</h2>
-            <p>这是商品2的简单说明。这个商品具有极高的性价比，是很多用户的首选。</p>
+            <div class="product-image">
+                <img src="https://shop.r10s.jp/lovehiroshima/cabinet/12207440/15.jpg" alt="盗聴器 発見器">
+            </div>
+            
         </div>
-
-        <!-- 商品3 -->
+<div class="text">
+                <h2>商品名称 4</h2>
+                <p>这是商品1的简单说明。它非常适合日常使用，质量非常好，价格合理。</p>
+            </div>
+        <!-- 商品5 -->
         <div class="product">
-            <img src="https://via.placeholder.com/280x180" alt="商品3">
-            <h2>商品名称 3</h2>
-            <p>商品3的简单介绍。它的功能非常强大，使用非常便捷，是你生活中的好帮手。</p>
+            <div class="product-image">
+                <img src="https://image.rakuten.co.jp/lovehiroshima/cabinet/12203198/bla.jpg" alt="デジタルカメラ">
+            </div>
+            
         </div>
-    </div>
+<div class="text">
+                <h2>商品名称 5</h2>
+                <p>这是商品2的简单说明。这个商品具有极高的性价比，是很多用户的首选。</p>
+            </div>
+    
 
     <footer>
         <p>&copy; 2025 我的在线商店. 版权所有.</p>
