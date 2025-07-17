@@ -43,18 +43,30 @@
             padding: 20px;
         }
  .product4 {
-            background-color: #a3c8f0; /* 浅蓝色背景 */
-   	    color: white; /* 白色字体 */
-            border-radius: 10px; /* 使用标准的 border-radius 属性 */
-            overflow: hidden;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin: 10px 10px; /* 调整左右边距 */
-            width: 280px;
-            transition: transform 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            padding: 20px; /* 给商品卡片内部添加内边距，使内容不贴边 */
-        }
+    background-color: #a3c8f0; /* 浅蓝色背景 */
+    color: white; /* 白色字体 */
+    border-radius: 10px; /* 使用标准的 border-radius 属性 */
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px 10px; /* 调整左右边距 */
+    width: 20px; /* 固定宽度 */
+    height: 20px; /* 固定高度，确保是正方形 */
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 20px; /* 给商品卡片内部添加内边距，使内容不贴边 */
+    justify-content: center;
+    align-items: center; /* 内容居中 */
+}
+
+.product4 input[type="number"] {
+    width: 100%; /* 使输入框宽度为 100% */
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
         .product4 h4 {
             font-size: 16px;
             margin: 5px 0;
@@ -215,7 +227,7 @@
 	<p>デジタルカメラ</p>
 </div>
 <div class="product4">
-    <input type="number" id="product4-quantity" name="product4-quantity" min="1" max="99" value="1">
+    <input type="number" id="product4-quantity" name="product4-quantity" value="1">
 </div>
 <div class="product2">
 	<h3>Q：申し込み方法は？<br>
@@ -223,7 +235,7 @@
 	</h3>
 </div>
 <div class="product4">
-    <input type="number" id="product4-quantity" name="product4-quantity" min="2" max="99" value="1">
+    <input type="number" id="product4-quantity" name="product4-quantity" value="2">
 </div>
 <div class="product2">
 	<h3>Q：参加方法を教えてください<br>
@@ -237,7 +249,7 @@ A：希望のキャンペーンに応募<br>
 	</h3>
 </div>
 <div class="product4">
-    <input type="number" id="product4-quantity" name="product4-quantity" min="3" max="99" value="1">
+    <input type="number" id="product4-quantity" name="product4-quantity" value="3">
 </div>
 <div class="product2">
 	<h3> Q：返金方法は？<br>
@@ -245,7 +257,7 @@ A.PayPay・PayPal・Amazonギフトコードで対応
 	</h3>
 </div>
 <div class="product4">
-    <input type="number" id="product4-quantity" name="product4-quantity" min="4" max="99" value="1">
+    <input type="number" id="product4-quantity" name="product4-quantity" value="4">
 </div>
 <div class="product2">
 	<h3>Q：返金時期は？<br>
@@ -253,7 +265,7 @@ A：レビュー掲載後、3営業日以内に返金手続きを完了
 	</h3>
 </div>
 <div class="product4">
-    <input type="number" id="product4-quantity" name="product4-quantity" min="5" max="99" value="1">
+    <input type="number" id="product4-quantity" name="product4-quantity" value="5">
 </div>
 <div class="product2">
 	<h3>Q：費用はかかりますか？<br>
@@ -261,7 +273,7 @@ A：全額返金のため完全無料でご参加いただけます
 	</h3>
 </div>
 <div class="product4">
-    <input type="number" id="product4-quantity" name="product4-quantity" min="6" max="99" value="1">
+    <input type="number" id="product4-quantity" name="product4-quantity" value="6">
 </div>
 <div class="product2">
 	<h3>Q：個人情報は安全ですか？<br>
@@ -269,7 +281,7 @@ A：個人情報保護法に基づき厳重に管理し、第三者への開示�
 	</h3>
 </div>
 <div class="product4">
-    <input type="number" id="product4-quantity" name="product4-quantity" min="7" max="99" value="1">
+    <input type="number" id="product4-quantity" name="product4-quantity" value="7">
 </div>
 <div class="product2">
 	<h3>Q：月に何回まで参加可能？<br>
@@ -277,7 +289,7 @@ A：お一人様月1回・1商品まで
 	</h3>
 </div>
 <div class="product4">
-    <input type="number" id="product4-quantity" name="product4-quantity" min="8" max="99" value="1">
+    <input type="number" id="product4-quantity" name="product4-quantity" value="8">
 </div>
 <div class="product2">
 	<h3>Q：本当に無料ですか？<br>
@@ -287,7 +299,7 @@ A：はい。商品代金は全額返金されます
 	</h3>
 </div>
 <div class="product4">
-    <input type="number" id="product4-quantity" name="product4-quantity" min="9" max="99" value="1">
+    <input type="number" id="product4-quantity" name="product4-quantity" value="9">
 </div>
 <div class="product2">
 	<h3>Q：なぜ無料で提供？<br>
