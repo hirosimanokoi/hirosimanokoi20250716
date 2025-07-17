@@ -45,8 +45,17 @@
  .product4 {
     background-color: #a3c8f0; /* 浅蓝色背景 */
     color: white; /* 白色字体 */
-    width: 20px; /* 固定宽度 */
-    height: 20px; /* 固定高度，确保是正方形 */
+    width: 60px; /* 固定宽度 */
+    height: 60px; /* 固定高度，确保是正方形 */
+    border-radius: 10px;
+    overflow: hidden;
+    --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 20px; /* 给左侧添加外边距 */
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 垂直居中 */
+    align-items: center; /* 水平居中 */
 }
         .product4 h4 {
             font-size: 16px;
@@ -57,7 +66,7 @@
     background-color: white;
     border-radius: 10px; /* 使用标准的 border-radius 属性 */
     overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 10px auto; /* 将外边距设置为 auto，水平居中 */
     width: 280px;
     transition: transform 0.3s ease;
@@ -75,9 +84,8 @@
 }
         .product {
             background-color: white;
-            --border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	    margin: 10px auto; /* 将外边距设置为 auto，水平居中 */
             width: 280px;
             transition: transform 0.3s ease;
@@ -152,16 +160,6 @@
         /* 商品卡片的悬停效果 */
         .product:hover {
             transform: translateY(-10px); /* 悬停时商品卡片稍微抬起 */
-        }
-	 /* 让输入框只能输入数字 */
-        .product4 input[type="number"] {
-            width: 100%;
-            padding: 10px;
-            font-size: 16px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            margin-top: 10px;
-            text-align: center;
         }
 
         /* 让 product4 与 product2 左对齐 */
