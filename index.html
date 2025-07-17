@@ -121,6 +121,24 @@ display: flex; /* 使用 flex 布局 */
         .product:hover {
             transform: translateY(-10px); /* 悬停时商品卡片稍微抬起 */
         }
+
+/* 文字框样式 */
+        .text-box-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+            padding: 10px;
+        }
+        .text-box {
+            width: 300px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            background-color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -157,6 +175,18 @@ display: flex; /* 使用 flex 布局 */
 <div class="text">
 	<h2>デジタルカメラ</h2>
 </div>
+
+<!-- 8个文字框 -->
+    <div class="text-box-container">
+        <textarea class="text-box" placeholder="请输入内容..."></textarea>
+        <textarea class="text-box" placeholder="请输入内容..."></textarea>
+        <textarea class="text-box" placeholder="请输入内容..."></textarea>
+        <textarea class="text-box" placeholder="请输入内容..."></textarea>
+        <textarea class="text-box" placeholder="请输入内容..."></textarea>
+        <textarea class="text-box" placeholder="请输入内容..."></textarea>
+        <textarea class="text-box" placeholder="请输入内容..."></textarea>
+        <textarea class="text-box" placeholder="请输入内容..."></textarea>
+    </div>
 
     <footer>
         <p>&copy; 広島の恋.2025</p>
